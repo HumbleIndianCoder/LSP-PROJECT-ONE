@@ -8,7 +8,9 @@ EXE := $(BIN_DIR)/main.exe
 SRC := $(wildcard $(SRC_DIR)/*.c)
 OBJ := $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
-CFLAGS = -I$(INC_DIR) -Wall
+# Add -w to remove all warnings
+
+CFLAGS = -I$(INC_DIR) -Wall  
 LDFLAGS = -lpthread
 
 #-------------------------------------------#
